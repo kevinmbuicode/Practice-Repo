@@ -15,11 +15,13 @@ code {
 .contacts {
   display: flex;
   border: 1px solid red;
+  width: 175px;
+  flex-direction: row;
 }
 .contact-card {
   display: flex;
   flex-direction: column;
-  padding: 1px;
+  width: 175px;
   border: 1px solid blue;
   border-radius: 10px;
   box-shadow: 4px solid grey;
