@@ -7,13 +7,8 @@ function App() {
   const data = Mocks.map(mock => {
     return(
       <Contacts
-        name = {mock.name}
-        img = {mock.img}
-        phone = {mock.phone}
-        rating = {mock.rating}
-        location = {mock.location}
-        price = {mock.price}
-        email = {mock.email}
+        id = {mock.id}
+        mock = {mock}
        />
     )
   })

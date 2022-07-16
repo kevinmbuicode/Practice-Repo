@@ -1,5 +1,6 @@
 export default [
     {
+        id: 1,
         img: '../public/images/cat_one.jpeg',
         phone: '2093930302',
         email: 'oooooooooo',
@@ -9,6 +10,7 @@ export default [
         price: 1231,
     },
     {
+        id: 2,
         img: '../public/images/cat_one.jpeg',
         phone: '9292200202',
         email: 'jjjjjjjjjj',
@@ -18,6 +20,7 @@ export default [
         price: 1232,
     },
     {
+        id: 3,
         img: '../public/images/cat_one.jpeg',
         phone: '92020022-0',
         email: 'mmmmmmmmmm',
@@ -27,6 +30,7 @@ export default [
         price: 1233,
     },
     {
+        id: 4,
         img: '../public/images/cat_one.jpeg',
         phone: '0200020-2',
         email: 'kkkkkkkk',
