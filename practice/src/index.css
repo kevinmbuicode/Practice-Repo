@@ -31,3 +31,9 @@ code {
   flex-direction: row;
   margin-left: 10px;
 }
+
+.card{
+  border: 1px solid blue;
+  width: 250px;
+  margin-left: 20px;
+}
