@@ -9,6 +9,7 @@ import starFilledIcon from "./components/images/star-full-icon.png"
 import './index.css'
 
 function App() {
+  const [count, setCount] = React.useState(0)
 
   const [contact, setContact] = React.useState({
     firstName: "John",
@@ -28,6 +29,16 @@ function App() {
 
   let starIcon = (contact.isFavorite ? starFilledIcon : starEmptyIcon)
   
+  function countUP() {
+    console.log("Up clicked")
+    setCount(prevCount => prevCount + 1)
+  }
+
+  function countDown() {
+    console.log("Down clicked")
+    setCount(prevCount => prevCount -1)
+  }
+
   return (
     <main>
       <article className="card">
@@ -53,8 +64,18 @@ function App() {
 
           <p className="card--contact">
           {contact.email}</p>
+          {/* {passing state as props} */}
         </div>
+          
       </article>
+
+      <button onClick={countUP}>
+            Add
+      </button>
+      {count}
+      <button onClick={countDown}>
+        Subtract
+      </button>
     </main>
     
   );
