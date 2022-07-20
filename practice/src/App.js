@@ -8,6 +8,10 @@ import starEmptyIcon from "./components/images/star-empty.webp"
 import starFilledIcon from "./components/images/star-full-icon.png"
 import StarIcon from "./components/StarIcon";
 import './index.css'
+import WelcomeUser from "./components/Welcome";
+
+
+
 
 function App() {
   const [count, setCount] = React.useState(0)
@@ -40,8 +44,10 @@ function App() {
     setCount(prevCount => prevCount - 1)
   }
 
+
   return (
     <main>
+    <WelcomeUser user={contact.firstName}/>
       <article className="card">
         <img src={catImage}  
         alt="contact_image" 
