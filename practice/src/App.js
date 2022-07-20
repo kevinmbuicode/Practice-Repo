@@ -6,6 +6,7 @@ import React from "react";
 import catImage from "./components/images/cat-four.png";
 import starEmptyIcon from "./components/images/star-empty.webp"
 import starFilledIcon from "./components/images/star-full-icon.png"
+import StarIcon from "./components/StarIcon";
 import './index.css'
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
 
   function countDown() {
     console.log("Down clicked")
-    setCount(prevCount => prevCount -1)
+    setCount(prevCount => prevCount - 1)
   }
 
   return (
@@ -48,10 +49,11 @@ function App() {
         height='150px' width='250px'/>
 
         <div className="card--info">
-          <img src={starIcon} 
-          onClick={toggleFavorite}
-          alt="star icon" 
-          height='18px' width='18px'/>
+          <StarIcon
+            src = {starIcon}
+            isFilled = {contact.isFavorite}
+            toggle = {toggleFavorite}
+          />
 
           <h2 
           className="card--name">
