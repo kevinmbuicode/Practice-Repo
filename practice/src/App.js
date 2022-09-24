@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef} from "react";
+
 //import Contacts from './components/Contact';
 //import Jokes from './components/Jokes';
 //import jokesData from  './jokesData'
@@ -11,16 +12,17 @@ import React, { useState, useEffect, useRef} from "react";
 // import WelcomeUser from "./components/Welcome";
 
 
+// code splitting usif dynamic import for performance
+const Contact = React.lazy (()=> import("./components/Contact"))
+
+
 
 
 function App() {
   const [ name, setName] = useState("")
-  const render = useRef(0)
   const inputRef = useRef()
   // use Ref looks like this { current: 0 because we set our useRef to 0}
-  useEffect(()=> {
-    render.current = render.current + 1
-  })
+  
   function focus() {
     inputRef.current.focus()
   }
@@ -108,7 +110,6 @@ function App() {
     <>
       <input ref={inputRef} value={name}type="text" onChange={(e) => setName(e.target.value)} />
       <p>My name is {name}</p>
-      <p>I rendered {render.current} times</p>
       <button onClick={focus}>Focus</button>
     </>
     
